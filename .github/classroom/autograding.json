@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "GET /students - Get all students",
+      "setup": "cd student && npm install && npx playwright install --with-deps",
+      "run": "cd student && npm run test:students:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120,
+      "points": 8
+    },
+    {
+      "name": "POST /students - Create a new student",
+      "setup": "",
+      "run": "cd student && npm run test:students:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 9
+    },
+    {
+      "name": "GET /instructors - Get all instructors",
+      "setup": "",
+      "run": "cd student && npm run test:instructors:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "POST /instructors - Create a new instructor",
+      "setup": "",
+      "run": "cd student && npm run test:instructors:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 9
+    },
+    {
+      "name": "GET /enrollments - Get all enrollments",
+      "setup": "",
+      "run": "cd student && npm run test:enrollments:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "POST /enrollments - Create a new enrollment",
+      "setup": "",
+      "run": "cd student && npm run test:enrollments:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "GET /courses - Get all courses",
+      "setup": "",
+      "run": "cd student && npm run test:courses:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "POST /courses - Create a new course",
+      "setup": "",
+      "run": "cd student && npm run test:courses:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 9
+    },
+    {
+      "name": "GET /assignments - Get all assignments",
+      "setup": "",
+      "run": "cd student && npm run test:assignments:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "POST /assignments - Create a new assignment",
+      "setup": "",
+      "run": "cd student && npm run test:assignments:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 9
+    },
+    {
+      "name": "GET /grades - Get all grades",
+      "setup": "",
+      "run": "cd student && npm run test:grades:get",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    },
+    {
+      "name": "POST /grades - Create a new grade",
+      "setup": "",
+      "run": "cd student && npm run test:grades:post",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 8
+    }
+  ]
+}

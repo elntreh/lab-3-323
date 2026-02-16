@@ -1,0 +1,36 @@
+name: Autograding Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        working-directory: ./student
+        run: npm install
+
+      - name: Install Playwright browsers
+        working-directory: ./student
+        run: npx playwright install --with-deps
+
+      - name: Run autograding tests
+        uses: education/autograding@v1
