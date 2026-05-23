@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/z-M7akjs)
 # API Building Practice Dataset
 
 This dataset contains realistic university data for practicing API development. The data includes students, instructors, courses, enrollments, assignments, and grades with relationships between entities.
@@ -8,9 +7,6 @@ This dataset contains realistic university data for practicing API development. 
 After cloning this repository, follow these steps:
 
 ```bash
-# Navigate to the student directory
-cd student
-
 # Install dependencies
 npm install
 
