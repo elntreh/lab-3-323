@@ -1,11 +1,11 @@
-import { getCourse, createCourse } from "../models/courses.js";
+import { getCourses, createCourse } from "../models/courses.js";
 
 export function getCourseController(req, res) {
     const courses = getCourses();
-    res.json(courses);
+    res.json({ status: "success", data: courses });
 }
 
 export function createCourseController(req, res) {
-    const newCourses = createCourse(req,body);
-    res.json(newCourses);
+    const newCourse = createCourse(req.body);
+    res.json({ status: "success", data: newCourse });
 }

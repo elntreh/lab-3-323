@@ -1,19 +1,18 @@
 import fs from "fs";
 import path from "path";
-import {fileURLToPath} from "url";
+import { fileURLToPath } from "url";
 
-const__filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const filepath = path.join(__dirname, "data.json");
+const filepath = path.join(__dirname, "../data.json");
 
-
-readData = () => {
+const readData = () => {
     return JSON.parse(fs.readFileSync(filepath, "utf-8"));
 }
 
-writeData = (data) => {
-    fs.writeFileSync(filepath, JSON.stringify(data));
+const writeData = (data) => {
+    fs.writeFileSync(filepath, JSON.stringify(data, null, 2));
 }
 
 export function getAssignments() {
@@ -23,7 +22,7 @@ export function getAssignments() {
 
 export function createAssignment(body) {
     const data = readData();
-    const newAssignment = { id: data.assignments.length + 1, ...body};
+    const newAssignment = { id: data.assignments.length + 1, ...body };
     data.assignments.push(newAssignment);
     writeData(data);
     return newAssignment;

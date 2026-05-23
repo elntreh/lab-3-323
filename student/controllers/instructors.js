@@ -2,10 +2,10 @@ import { getInstructors, createInstructor } from "../models/instructors.js";
 
 export function getInstructorController(req, res) {
     const instructors = getInstructors();
-    res.json(instructors);
+    res.json({ status: "success", data: instructors });
 }
 
 export function createInstructorController(req, res) {
-    const newInstructors = createInstructor(req,body);
-    res.json(newInstructors);
+    const newInstructor = createInstructor(req.body);
+    res.json({ status: "success", data: newInstructor });
 }
